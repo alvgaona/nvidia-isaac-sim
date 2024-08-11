@@ -1,0 +1,13 @@
+[project]
+name = "isaac-sim-ros-humble"
+version = "0.1.0"
+description = "ROS Humble in a container for Isaac Sim"
+authors = ["Alvaro <alvgaona@gmail.com>"]
+channels = ["robostack-staging", "conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "~=3.10.0"
+ros-humble-ros-base = "*"
+ros-humble-vision-msgs = ">=4.0.0,<5"
+ros-humble-ackermann-msgs = ">=2.0.2,<3"
