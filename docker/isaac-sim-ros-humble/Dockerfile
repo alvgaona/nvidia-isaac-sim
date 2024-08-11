@@ -42,8 +42,15 @@ WORKDIR /
 
 COPY entrypoint.sh .
 
-ENV RMW_IMPLEMENTATION rmw_fastrtps_cpp
+# Other rmw implementations are supported,
+# namely rmw_cyclonedds_cpp, rmw_gurumdds_cpp,
+# and rmw_fastrtps_cpp.
+# rmw_connextdds is a bit more convoluted as it
+# has a more complex license scheme, but shouldn't
+# be so hard to make it work
+ENV RMW_IMPLEMENTATION rmw_cyclonedds_cpp
 ENV FASTRTPS_DEFAULT_PROFILES_FILE /ros-humble/fastdds.xml
+ENV CYCLONEDDS_URI=/ros-humble/cyclonedds.xml
 ENV PATH $PATH:/isaac-sim/exts/omni.isaac.ros2_bridge/humble/lib
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/isaac-sim/exts/omni.isaac.ros2_bridge/humble/lib
 

@@ -12,7 +12,6 @@ docker build --pull -t \
 ## Run container
 
 ```sh
-Run container:
 docker run -d --name isaac-sim --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
   -e "PRIVACY_CONSENT=Y" \
   -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw \
