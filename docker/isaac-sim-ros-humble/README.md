@@ -5,9 +5,8 @@
 ```sh
 docker login nvcr.io
 docker build --pull -t \
-  isaac-sim:2023.1.0-ubuntu22.04 \
-  --build-arg ISAACSIM_VERSION=2023.1.0 \
-  --file Dockerfile.2023.1.0-ubuntu22.04 .
+  nvidia-isaac-sim:4.1.0-ros-humble \
+  --build-arg ISAACSIM_VERSION=4.1.0 .
 ```
 
 ## Run container
@@ -24,5 +23,5 @@ docker run -d --name isaac-sim --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --
   -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
   -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
   -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-  isaac-sim-ros-humble
+  nvidia-isaac-sim:4.1.0-ros-humble
 ```
