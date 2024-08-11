@@ -28,10 +28,7 @@ WORKDIR /
 RUN curl https://pyenv.run | bash
 RUN curl -fsSL https://pixi.sh/install.sh | bash
 
-ENV PATH /root/.pyenv/bin:/root/.pyenv/shims:/root/.pixi/bin:$PATH
-
-RUN pyenv install ${PYTHON_VERSION}
-RUN pyenv global ${PYTHON_VERSION}
+ENV PATH /root/.pixi/bin:$PATH
 
 COPY . /ros-humble
 
