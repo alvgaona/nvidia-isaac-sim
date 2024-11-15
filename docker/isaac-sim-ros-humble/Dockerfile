@@ -1,7 +1,7 @@
-ARG ISAACSIM_VERSION=4.1.0
+ARG ISAACSIM_VERSION=4.2.0
 FROM nvcr.io/nvidia/isaac-sim:${ISAACSIM_VERSION} AS isaac-sim
 
-LABEL version=0.1.0
+LABEL version=0.2.0
 LABEL maintainer=alvgaona@gmail.com
 LABEL rmw=fastrtps
 
